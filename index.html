@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Store E-commerce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Find More</h1>
+      <p>Shop locally with product listings, cart, and checkout.</p>
+    </div>
+    <div class="cart-preview">
+      <button id="cartToggle" aria-expanded="false">Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Find More a Local Store E-commerce Platform</h2>
+      <p>Browse products with images, descriptions, prices and add them to your shopping cart.</p>
+    </section>
+
+    <section class="products-section">
+      <div class="section-header">
+        <h3>Featured Products</h3>
+        <div class="filters">
+          <label>
+            Search
+            <input type="search" id="searchInput" placeholder="Search products..." />
+          </label>
+          <label>
+            Sort by
+            <select id="sortSelect">
+              <option value="default">Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+
+    <aside id="cartPanel" class="cart-panel hidden">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart">Close</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <div>
+          <p>Subtotal</p>
+          <p id="cartTotal">$0.00</p>
+        </div>
+        <button id="checkoutBtn" class="primary-btn">Checkout</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Local Store E-commerce Platform • Optional features: reviews, support, sort & filters</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
